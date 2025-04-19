@@ -1,2 +1,2 @@
-# Singa-Pling-
+# SingaPling
 Demo Telco RAG System
