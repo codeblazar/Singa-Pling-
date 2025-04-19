@@ -10,13 +10,20 @@
   <h1>Welcome to Singa-Pling</h1>
   <p>Need help? Ask our AI assistant below.</p>
 
-  <!-- Element that triggers the widget -->
-  <input placeholder="Search here" id="searchWidgetTrigger" />
-
-  <!-- Search widget element -->
+  <!-- Automatically trigger the widget on page load -->
   <gen-search-widget
     configId="172f3417-59b5-42f8-9a35-778722aca7f4"
     triggerId="searchWidgetTrigger">
   </gen-search-widget>
+
+  <script>
+    window.onload = function() {
+      // Automatically open the widget when the page loads
+      const widget = document.querySelector('gen-search-widget');
+      if (widget) {
+        widget.open(); // Open the widget automatically
+      }
+    };
+  </script>
 </body>
 </html>
