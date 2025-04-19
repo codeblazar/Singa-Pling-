@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Singa-Pling Telco</title>
+</head>
+<body>
+  <h1>Welcome to Singa-Pling</h1>
+  <p>Singapore’s freshest telco! Need help? Use the search below.</p>
+
+  <!-- Trigger element -->
+  <input placeholder="Search here" id="searchWidgetTrigger" />
+
+  <!-- Widget script and element -->
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+  <gen-search-widget
+    configId="b8eb827a-68aa-4714-89ab-fab462c377ac"
+    triggerId="searchWidgetTrigger">
+  </gen-search-widget>
+
+  <!-- Auth token setup -->
+  <script>
+    const searchWidget = document.querySelector('gen-search-widget');
+    searchWidget.authToken = "<INSERT_YOUR_JWT_TOKEN_HERE>"; // Replace with real token later
+  </script>
+</body>
+</html>
