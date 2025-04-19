@@ -2,26 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Singa-Pling Telco</title>
+  <title>Singa-Pling Support</title>
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 </head>
 <body>
   <h1>Welcome to Singa-Pling</h1>
-  <p>Singapore’s freshest telco! Need help? Use the search below.</p>
+  <p>Need help? Ask our AI assistant below.</p>
 
-  <!-- Trigger element -->
-  <input placeholder="Search here" id="searchWidgetTrigger" />
+<!-- Widget JavaScript bundle -->
+<script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 
-  <!-- Widget script and element -->
-  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+<!-- Search widget element is not visible by default -->
+<gen-search-widget
+  configId="172f3417-59b5-42f8-9a35-778722aca7f4"
+  triggerId="searchWidgetTrigger">
+</gen-search-widget>
+
+<!-- Element that opens the widget on click. It does not have to be an input -->
+<input placeholder="Search here" id="searchWidgetTrigger" />
+
   <gen-search-widget
-    configId="b8eb827a-68aa-4714-89ab-fab462c377ac"
+    configId="YOUR_CONFIG_ID"
     triggerId="searchWidgetTrigger">
   </gen-search-widget>
-
-  <!-- Auth token setup -->
-  <script>
-    const searchWidget = document.querySelector('gen-search-widget');
-    searchWidget.authToken = "<INSERT_YOUR_JWT_TOKEN_HERE>"; // Replace with real token later
-  </script>
 </body>
 </html>
