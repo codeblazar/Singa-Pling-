@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Interface</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Search Widget</title>
+  <!-- Optional: your own CSS for positioning/styling the trigger -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="chatbot-container">
-        <div id="chatbox"></div>
-        <input type="text" id="user-input" placeholder="Type a message...">
-        <button id="send-btn">Send</button>
-    </div>
+  <!-- This input will trigger the search widget -->
+  <input
+    id="searchWidgetTrigger"
+    placeholder="Search here"
+    style="width: 300px; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"
+  />
 
-    <script src="script.js"></script>
+  <!-- The invisible widget element -->
+  <gen-search-widget
+    configId="dc115be7-09e2-42ee-a67c-fa1095dfd0b1"
+    triggerId="searchWidgetTrigger">
+  </gen-search-widget>
+
+  <!-- Google’s AI widget bundle -->
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 </body>
 </html>
